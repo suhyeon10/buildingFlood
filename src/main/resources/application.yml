@@ -1,0 +1,26 @@
+
+spring:
+  profiles:
+    active: aws, secret
+  security:
+    user:
+      name: user
+      password: 1234
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+
+server:
+  port: 8090
+  servlet:
+    context-path: /
+management:
+  endpoints:
+    web:
+      base-path: /
+  endpoint:
+    health:
+      show-details: always
